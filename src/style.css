@@ -1,0 +1,314 @@
+body{
+    background-image: url(img/icons/fondo.jpg);
+}
+
+.header{
+    display: flex;
+    background-color: rgb(215, 233, 250);
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+
+}
+
+.imgPokemones{
+    width: 80px;
+    padding: 0px;
+}
+
+.menu{
+    display: flex;
+    width: 364px;
+    padding-right: 190px;
+}
+
+.botonesMenu{
+    display: flex;
+    align-items: center;
+    border: 0px;
+    color:rgb(51, 54, 54);
+    background-color: rgb(215, 233, 250);
+    font-size: x-large;
+    margin-right: 20px;
+    height: 50px;
+}
+
+.botonesMenu:active {
+    background-color: rgb(192, 221, 248);
+    cursor: pointer;
+}
+
+.botonesMenu:hover {
+    background-color: rgb(192, 221, 248);
+  cursor: pointer;
+}
+
+.pokeballa{
+    margin-top: 30px;
+    width: 240px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-inline: auto;
+}
+
+.footer {
+    background-color:  rgb(215, 233, 250);
+    color:rgb(51, 54, 54);
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-small;
+    margin-top: 100%;
+}
+
+/* boton-filter  */
+.filter-btn {
+    background-color: rgb(215, 233, 250);
+    color: rgb(51, 54, 54);
+    padding: 10px;
+    font-size: 16px;
+    border-color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 80px;
+  }
+  
+  /* padre-filter */
+  .filter{
+    margin: 10px;
+    position: relative;
+    display: inline-block;
+  }
+  /*  lista-filter  */
+  .filter-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 80px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   
+  }
+  .filter:hover .filter-content {
+    display: grid;
+  }
+  
+  .filter:hover .filter-btn {
+    background-color: rgb(192, 221, 248);;
+  }
+
+
+  /* boton-order  */
+.order-btn {
+    background-color: rgb(215, 233, 250);
+    color: rgb(51, 54, 54);
+    padding: 10px;
+    font-size: 16px;
+    border-color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 80px;
+  }
+  
+  /* padre-order */
+  .order{
+    margin: 10px;
+    position: relative;
+    display: inline-block;
+  }
+  /*  lista-order  */
+  .order-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 80px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   
+  }
+  .order:hover .order-content {
+    display: grid;
+  }
+  
+  .order:hover .order-btn {
+    background-color: rgb(192, 221, 248);;
+  }
+
+
+  .buscadores{
+    display: flex;
+  }
+
+  .bloquePokemones{
+    display: inline-block;
+    align-items: center; /* Alineación vertical */
+    justify-content: center; /* Alineación horizontal */
+    text-align: center; /* Alineación del texto */
+    border-radius: 20px;
+    margin: 10px;
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: 6px 20px 10px rgb(79, 79, 79);}
+
+.bloquetransparente{
+        background-color: rgba(0, 0, 0, 0.2);
+        display: inline-block;
+        border-radius: 20px;
+        padding: 20px;
+        height: 100%;
+      }
+
+    .pokemon{
+        background-size: cover;
+        color: whitesmoke;
+        background-position: center;
+        
+        font-family:'Courier New', Courier, monospace;
+
+    }
+      
+    .pokemon-fire{
+        background-image: url(img/fondos/fuego.png);
+        background-size: cover;
+        
+      }
+       
+    .pokemon-grass{
+        background-image: url(img/fondos/grass.png);
+        background-size: cover;
+    }
+        
+    .pokemon-water{
+        background-image: url(img/fondos/water.png);
+        background-size: cover;
+    }
+       
+    .pokemon-bug{
+        background-image: url(img/fondos/bicho.png);
+        background-size: cover;
+    }
+       
+    .pokemon-poison{
+        background-image: url(img/fondos/posion.png);
+        background-size: cover;
+    }
+       
+       
+       .pokemon-electric{
+         background-image: url(img/fondos/electrico.png);
+         background-size: cover;
+        }
+       
+        .pokemon-rock{
+         background-image: url(img/fondos/roca.png);
+         background-size: cover;
+        }
+       
+        .pokemon-ghost{
+         background-image: url(img/fondos/fantasma.png);
+         background-size: cover;
+        }
+       
+ .pokemon-ice {
+     background-image: url(img/fondos/hielo.png);
+     background-size: cover;
+         
+        }
+       
+        .pokemon-psychic {
+         background-image: url(img/fondos/psiquico.png);
+         background-size: cover;
+         
+        }
+       
+        .pokemon-ground {
+         background-image: url(img/fondos/ground.png);
+         background-size: cover;
+         
+        }
+       
+        .pokemon-fairy {
+         background-image: url(img/fondos/hada.png);
+         background-size: cover;
+         
+       }
+       
+       .pokemon-dragon {
+         background-image: url(img/fondos/dragon.png);
+         background-size: cover;
+         
+       }
+       
+       .pokemon-dark {
+         background-image: url(img/fondos/sinistro.png);
+         background-size: cover;
+         
+       }
+       
+       .pokemon-normal {
+         background-image: url(img/fondos/normal.png);
+         background-size: cover;
+         
+       }
+       
+       .pokemon-steel {
+         background-image: url(img/fondos/);
+         background-size: cover;
+         
+       }
+       
+       .pokemon-fighting {
+         background-image: url(img/fondos/lucha.png);
+         background-size: cover;
+         
+       }
+
+       .iconType {
+        width: 30px;
+        height: 30px;
+        border-radius: 1px;
+      }
+
+      .letrastarjetas{
+        font-family: auto;
+      }
+
+      .tittle{
+        justify-content: center;
+        display: flex;
+        font-family: auto;
+        align-content: center;
+        padding-top: 50px;
+      }
+      .pokemonDescription{
+        display: flex;
+        justify-content: center;
+        align-items:last baseline;
+        flex-wrap: wrap;
+      }
+      
+      .fondoCaracteristicas{
+        background-color: white;
+        color: wh;
+        font-family: auto;
+        border-radius: 5px;
+        margin: 50px;
+        width: 300px;
+        height: auto;
+        padding: 20px;
+      }
+
+      .transparenciaCaracteristicas{
+        background-color: rgba(255, 255, 255, 0.4);}
+      
+      .margin{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5%;
+      }
+
+      .imgsPokemon{
+        width: 200px;
+      }
