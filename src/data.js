@@ -23,8 +23,9 @@ export function filter (pokemones, type){
 
 }
 
-/*export function filterEgg (pokemones){
-  console.log("soy filterEgg")
+export function filterEgg (pokemones, egg){
+  console.log("soy filterEgg", pokemones)
+  console.log("soy filterEgg2", egg)
   let pokemonesEgg = pokemones.filter(
   (pokemon) => {
     if(pokemon.egg.includes(egg)){
@@ -34,7 +35,7 @@ export function filter (pokemones, type){
  
   return pokemonesEgg
 
-}*/
+}
 
 
 export function orderAz (pokemones){

@@ -3,7 +3,7 @@ import {filter} from "./data.js";
 import {orderAz} from "./data.js";
 import {orderZa} from "./data.js";
 import {mostrarData} from "./data.js";
-//import {filterEgg} from "./daja.js"
+import {filterEgg} from "./data.js"
 
 
 
@@ -41,13 +41,36 @@ function mostrarPokemones(contenedorPokemon, pokemones){
 } 
 
 /*------------------------------Huevos-------------------------------------------*/
-/*document.getElementById("huevos").innerHTML=``
+document.getElementById("huevos").innerHTML=``
 function opcionesHuevos (){
-console.log("estoy en opcionesHuevos")
- 
-    
+  console.log("estoy en opcionesHuevos")
+huevos.innerHTML= `
+<button class="tarjetaEgg" data-km="2 km">2km</button>
+<button class="tarjetaEgg" data-km="5 km">5km</button>
+<button class="tarjetaEgg" data-km="7 km">7km</button>
+<button class="tarjetaEgg" data-km="10 km">10km</button>
+`
 
-}*/
+setTimeout(function () {
+  let tarjetaEgg = document.querySelectorAll(".tarjetaEgg")
+  tarjetaEgg.forEach((boton) => {
+    console.log(boton.dataset.km);
+
+    boton.addEventListener("click", (e) => {
+      console.log("addevent");
+      
+      contenedorPokemon.innerHTML=` `
+      let pokemonesEgg = filterEgg(pokemones, boton.dataset.km)
+      mostrarPokemones(contenedorPokemon, pokemonesEgg )
+
+
+    });
+  });
+
+  console.log("fin");
+}, 0);
+    
+}
 
 /*--------------------------------caracteristicas de pokemones-----------------------*/
 function cararacteristicasPokemones(pokemon) {
@@ -110,7 +133,7 @@ function mostrarFilter(buscadores){
           });
         });
     
-        console.log("fin");
+        //console.log("fin");
       }, 0);
     }
     
@@ -149,6 +172,8 @@ function mostrarOrder(buscadores){
            }, 0);
 }
 
+
+
 /*---------------------------Botones del menu--------------------------------------*/
 
 //boton home
@@ -159,6 +184,7 @@ botonHome.addEventListener("click", ()=>{
     document.getElementById("pokemones").setAttribute("style", "display:none")
     document.getElementById("buscadores").setAttribute("style", "display:none")
 });
+
 //boton pokemon
 let botonPokemones = document.getElementById("btnPokemones");
  botonPokemones.addEventListener("click", ()=>{
@@ -169,6 +195,7 @@ let botonPokemones = document.getElementById("btnPokemones");
     mostrarPokemones(contenedorPokemon, pokemones)
     mostrarFilter(buscadores)
     mostrarOrder(buscadores)
+  
 });
 
 //boton huevos
@@ -177,7 +204,8 @@ let botonPokemones = document.getElementById("btnPokemones");
     contenedorPokemon.innerHTML=``
     document.getElementById("buscadores").setAttribute("style", "display:none")
     document.getElementById("pokebollImg").setAttribute("style", "display:none")
-   // opcionesHuevos (huevos)
+    document.getElementById("huevos").setAttribute("style", "display:block")
+    opcionesHuevos ()
     
  })
 
@@ -198,5 +226,3 @@ let botonPokemones = document.getElementById("btnPokemones");
      document.getElementById("pokebollImg").setAttribute("style", "display:none")
      contenedorPokemon.innerHTML=`estoy en ciudades`
   })
-
-
