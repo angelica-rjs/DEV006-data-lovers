@@ -1,11 +1,14 @@
-import data from './data/pokemon/pokemon.js';
+//import data from './data/pokemon/pokemon.js';
 import {filter} from "./data.js";
 import {orderAz} from "./data.js";
 import {orderZa} from "./data.js";
+import {mostrarData} from "./data.js";
+//import {filterEgg} from "./daja.js"
 
 
 
-export const pokemones = data.pokemon;
+
+export const pokemones = mostrarData()
 
 const contenedorPokemon = document.getElementById("pokemones");
 contenedorPokemon.innerHTML=` `
@@ -37,26 +40,29 @@ function mostrarPokemones(contenedorPokemon, pokemones){
      })
 } 
 
+/*------------------------------Huevos-------------------------------------------*/
+/*document.getElementById("huevos").innerHTML=``
+function opcionesHuevos (){
+console.log("estoy en opcionesHuevos")
+ 
+    
+
+}*/
+
 /*--------------------------------caracteristicas de pokemones-----------------------*/
 function cararacteristicasPokemones(pokemon) {
-        buscadores.innerHTML= ``
-        contenedorPokemon.innerHTML= `
-        <div class="margin">
-        <div class= "pokemon-${pokemon.type[0]} bloquetransparente ">
-        <h2 class="tittle">${pokemon.name} 
-        </h2> <div class="pokemonDescription"><img  class= "imgsPokemon"src="${pokemon.img}">
-       <div class= "fondoCaracteristicas transparenciaCaracteristicas" <p>  ${pokemon.about}  <br>  type: ${pokemon.type} <br>
-         city: ${pokemon.generation.name} <br> num:  ${pokemon.num} <br>
-         resistant: ${pokemon.resistant} <br> weaknesses: ${pokemon.weaknesses} </p></div></div></div>`
-    
-    }
-
-
-/*------------------------------Huevos-------------------------------------------*/
-function huevos (contenedorPokemon){
-    
+  buscadores.innerHTML= ``
+  contenedorPokemon.innerHTML= `
+  <div class="margin">
+  <div class= "pokemon-${pokemon.type[0]} bloquetransparente ">
+  <h2 class="tittle">${pokemon.name} 
+  </h2> <div class="pokemonDescription"><img  class= "imgsPokemon"src="${pokemon.img}">
+ <div class= "fondoCaracteristicas transparenciaCaracteristicas" <p>  ${pokemon.about}  <br>  type: ${pokemon.type} <br>
+   city: ${pokemon.generation.name} <br> num:  ${pokemon.num} <br>
+   resistant: ${pokemon.resistant} <br> weaknesses: ${pokemon.weaknesses} </p></div></div></div>`
 
 }
+
 /*----------------------------Filter y Order -------------------------------------*/
 
 document.getElementById("buscadores").innerHTML = ``
@@ -145,17 +151,6 @@ function mostrarOrder(buscadores){
 
 /*---------------------------Botones del menu--------------------------------------*/
 
-//boton pokemon
-let botonPokemones = document.getElementById("btnPokemones");
- botonPokemones.addEventListener("click", ()=>{
-    contenedorPokemon.innerHTML=` `
-    document.getElementById("pokebollImg").setAttribute("style", "display:none")
-    document.getElementById("pokemones").setAttribute("style", "display:block")
-    mostrarPokemones(contenedorPokemon, pokemones)
-    mostrarFilter(buscadores)
-    mostrarOrder(buscadores)
-});
-
 //boton home
 let botonHome = document.getElementById("home");
 botonHome.addEventListener("click", ()=>{
@@ -164,13 +159,26 @@ botonHome.addEventListener("click", ()=>{
     document.getElementById("pokemones").setAttribute("style", "display:none")
     document.getElementById("buscadores").setAttribute("style", "display:none")
 });
+//boton pokemon
+let botonPokemones = document.getElementById("btnPokemones");
+ botonPokemones.addEventListener("click", ()=>{
+    contenedorPokemon.innerHTML=` `
+    document.getElementById("pokebollImg").setAttribute("style", "display:none")
+    document.getElementById("pokemones").setAttribute("style", "display:block")
+    document.getElementById("buscadores").setAttribute("style", "display:block")
+    mostrarPokemones(contenedorPokemon, pokemones)
+    mostrarFilter(buscadores)
+    mostrarOrder(buscadores)
+});
 
 //boton huevos
  let botonhuevos = document.getElementById("eggs")
  botonhuevos.addEventListener("click", ()=>{
     contenedorPokemon.innerHTML=``
     document.getElementById("buscadores").setAttribute("style", "display:none")
-    contenedorPokemon.innerHTML=`estoy en huevos`
+    document.getElementById("pokebollImg").setAttribute("style", "display:none")
+   // opcionesHuevos (huevos)
+    
  })
 
  //boton evolucion
@@ -178,6 +186,7 @@ botonHome.addEventListener("click", ()=>{
  botonevolucion.addEventListener("click", ()=>{
     contenedorPokemon.innerHTML=``
     document.getElementById("buscadores").setAttribute("style", "display:none")
+    document.getElementById("pokebollImg").setAttribute("style", "display:none")
     contenedorPokemon.innerHTML=`estoy en evoluciones`
  })
 
@@ -186,6 +195,7 @@ botonHome.addEventListener("click", ()=>{
   botonciudades.addEventListener("click", ()=>{
      contenedorPokemon.innerHTML=``
      document.getElementById("buscadores").setAttribute("style", "display:none")
+     document.getElementById("pokebollImg").setAttribute("style", "display:none")
      contenedorPokemon.innerHTML=`estoy en ciudades`
   })
 

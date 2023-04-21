@@ -1,3 +1,14 @@
+import data from './data/pokemon/pokemon.js';
+
+export const pokemones = data.pokemon;
+
+
+// funcion que entrega los pokemoned
+export function mostrarData(){
+
+  return pokemones
+  }
+
 
 export function filter (pokemones, type){
     console.log("soy filter")
@@ -11,6 +22,19 @@ export function filter (pokemones, type){
     return pokemonesFiltrados
 
 }
+
+/*export function filterEgg (pokemones){
+  console.log("soy filterEgg")
+  let pokemonesEgg = pokemones.filter(
+  (pokemon) => {
+    if(pokemon.egg.includes(egg)){
+    return pokemon
+  }})
+  console.log({pokemonesEgg})
+ 
+  return pokemonesEgg
+
+}*/
 
 
 export function orderAz (pokemones){
@@ -45,7 +69,3 @@ export function orderZa (pokemones){
   return pokemones
   
 }
-  
-
-
-
