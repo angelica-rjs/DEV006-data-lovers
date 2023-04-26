@@ -1,50 +1,60 @@
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+/* imagen de fondo*/
 body{
     background-image: url(img/icons/fondo.jpg);
 }
 
+/* header*/
 .header{
-    display: flex;
-    background-color: rgb(215, 233, 250);
-    align-items: center;
-    justify-content: space-around;
-    height: 100%;
+  display: flex;
+  background-color: rgb(60, 61, 63);
+  align-items: center;
+  justify-content: space-around;
+  height: 100px;
 
 }
 
-.imgPokemones{
-    width: 80px;
+
+.imgPokoballHeader{
+    width: 8%;
     padding: 0px;
+    margin-right: 0;
 }
 
 .menu{
-    display: flex;
-    width: 364px;
-    padding-right: 190px;
+  display: flex;
+  width: 35%;
+  margin-left: 10%;
+  padding-right: 380px;
 }
 
 .botonesMenu{
     display: flex;
     align-items: center;
     border: 0px;
-    color:rgb(51, 54, 54);
-    background-color: rgb(215, 233, 250);
+    color: white;
+    background-color:rgb(60, 61, 63);;
     font-size: x-large;
-    margin-right: 20px;
+    margin-right: 55px;
     height: 50px;
 }
 
 .botonesMenu:active {
-    background-color: rgb(192, 221, 248);
+    background-color: rgb(31, 31, 32);
     cursor: pointer;
 }
 
 .botonesMenu:hover {
-    background-color: rgb(192, 221, 248);
+    background-color: rgb(31, 31, 32);
   cursor: pointer;
 }
 
 .pokeballa{
-    margin-top: 30px;
+    margin-top: 10%;
     width: 240px;
     height: 250px;
     display: flex;
@@ -54,20 +64,22 @@ body{
 }
 
 .footer {
-    background-color:  rgb(215, 233, 250);
-    color:rgb(51, 54, 54);
-    height: 55px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: xx-small;
-    margin-top: 100%;
+  background-color: rgb(60, 61, 63);;
+  color: white;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* font-size: xx-small; */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 /* boton-filter  */
 .filter-btn {
-    background-color: rgb(215, 233, 250);
-    color: rgb(51, 54, 54);
+    background-color: rgb(60, 61, 63);;
+    color: white;
     padding: 10px;
     font-size: 16px;
     border-color: black;
@@ -96,14 +108,14 @@ body{
   }
   
   .filter:hover .filter-btn {
-    background-color: rgb(192, 221, 248);;
+    background-color: rgb(31, 31, 32);
   }
 
 
   /* boton-order  */
 .order-btn {
-    background-color: rgb(215, 233, 250);
-    color: rgb(51, 54, 54);
+    background-color: rgb(60, 61, 63);;
+    color: white;
     padding: 10px;
     font-size: 16px;
     border-color: black;
@@ -132,7 +144,8 @@ body{
   }
   
   .order:hover .order-btn {
-    background-color: rgb(192, 221, 248);;
+    background-color: rgb(31, 31, 32);
+  
   }
 
 
@@ -149,7 +162,8 @@ body{
     margin: 10px;
     border-width: 1px;
     border-style: solid;
-    box-shadow: 6px 20px 10px rgb(79, 79, 79);}
+    box-shadow: 6px 20px 10px rgb(79, 79, 79);
+  }
 
 .bloquetransparente{
         background-color: rgba(0, 0, 0, 0.2);
@@ -313,7 +327,49 @@ body{
         width: 200px;
       }
 
+      .cajaEgg{
+        margin-top: 3%;
+        margin-left: 22%;
+      }
 
-      .tarjetasHuevos{
-        background-color: aquamarine;
+      .tarjetaEgg{
+        background-color: rgb(60, 61, 63);
+        color: white;
+        border-radius: 5px;
+        display:inline-block;
+        justify-content: center;
+        width: 150px;
+        height: 70px;
+        margin: 1%;
+        text-align: center;
+      }
+
+      .imgEgg{
+        width: 50px;
+        display: inline-block;
+      }
+
+      .h4 {
+        color: white;
+        display: inline-block;
+      }
+
+      #mostrarCalculo{
+
+        font-size: large;
+        display: flex;
+        justify-items: center;
+        justify-content: center;
+        background-color: rgb(60, 61, 63);
+        color: white;
+        width: 342px;
+        height: 54px;
+        margin: auto;
+        padding-right: 20px;
+        padding-left: 20px;
+
+      }
+
+      .pCalculo{
+        margin: auto;
       }

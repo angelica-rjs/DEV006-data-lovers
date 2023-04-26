@@ -7,39 +7,35 @@ export const pokemones = data.pokemon;
 export function mostrarData(){
 
   return pokemones
-  }
+}
 
 
 export function filter (pokemones, type){
-    console.log("soy filter")
-    let pokemonesFiltrados = pokemones.filter(
+  if(!Array.isArray(pokemones)){
+    throw new TypeError("pokemones debe ser un array.");
+  }
+  const pokemonesFiltrados = pokemones.filter(
     (pokemon) => {
       if(pokemon.type.includes(type)){
-      return pokemon
-    }})
-    console.log({pokemonesFiltrados})
-    
-    return pokemonesFiltrados
-
+        return pokemon
+      }}
+  )
+  return pokemonesFiltrados
 }
 
 export function filterEgg (pokemones, egg){
-  console.log("soy filterEgg", pokemones)
-  console.log("soy filterEgg2", egg)
-  let pokemonesEgg = pokemones.filter(
-  (pokemon) => {
-    if(pokemon.egg.includes(egg)){
-    return pokemon
-  }})
-  console.log({pokemonesEgg})
- 
-  return pokemonesEgg
+  const pokemonesEgg = pokemones.filter(
+    (pokemon) => {
+      if(pokemon.egg.includes(egg)){
+        return pokemon
+      }
+    })
 
+  return pokemonesEgg
 }
 
 
 export function orderAz (pokemones){
-  console.log("estoy en order")
   pokemones.sort((a,b) => {
     if (a.name < b.name ){
       return -1
@@ -48,15 +44,25 @@ export function orderAz (pokemones){
     } else {
       return 0
     }
-    
   })
   return pokemones
-  
+}
+
+
+export function calculoAgregado (Km){
+
+  const tiempoTotal = (Km)/ 5
+  const horas = Math.trunc(tiempoTotal)
+  let minutos = tiempoTotal * 60
+  minutos = minutos % 60 
+  const resultadoFinal = "Lo que debes caminar para consegir este huevo es " + horas + " horas y "+ minutos + " minutos"
+  return resultadoFinal
+
+
 }
 
 
 export function orderZa (pokemones){
-  console.log("estoy en order")
   pokemones.sort((a,b) => {
     if (a.name > b.name ){
       return -1
@@ -65,8 +71,6 @@ export function orderZa (pokemones){
     } else {
       return 0
     }
-    
   })
   return pokemones
-  
 }
