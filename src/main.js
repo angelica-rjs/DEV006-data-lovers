@@ -13,11 +13,12 @@ export const pokemones = mostrarData()
 
 const contenedorPokemon = document.getElementById("pokemones");
 contenedorPokemon.innerHTML=` `
+const buscadores = document.getElementById("buscadores")
 
 /*-------------------------------mostrar pokemones-------------------------------*/
 function mostrarPokemones(contenedorPokemon, pokemones){
   contenedorPokemon.innerHTML=` `
-  const buscadores = document.getElementById("buscadores")
+  
   pokemones.forEach((pokemon) => {
         
     //se crean los div por cada pokemon

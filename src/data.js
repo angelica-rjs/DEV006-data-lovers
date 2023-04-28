@@ -14,6 +14,9 @@ export function filter (pokemones, type){
   if(!Array.isArray(pokemones)){
     throw new TypeError("pokemones debe ser un array.");
   }
+  if(typeof type !== 'string'){
+    throw new  TypeError("type debe ser un string")
+  }
   const pokemonesFiltrados = pokemones.filter(
     (pokemon) => {
       if(pokemon.type.includes(type)){
@@ -24,9 +27,15 @@ export function filter (pokemones, type){
 }
 
 export function filterEgg (pokemones, egg){
+  /*if(!Array.isArray(pokemones)){
+    throw new TypeError("pokemones debe ser un array.");
+  }
+  if(typeof type !== 'string'){
+    throw new  TypeError("type debe ser un string")
+  }*/
   const pokemonesEgg = pokemones.filter(
     (pokemon) => {
-      if(pokemon.egg.includes(egg)){
+      if(pokemon.egg === egg){
         return pokemon
       }
     })
