@@ -42,7 +42,7 @@ describe('orderAz', () => {
       {pokemon: "bb"},
       {pokemon: "cc"}
     ]
-    expect(orderAz(dataPokemones)).toEqual(dataPokemonesOrdenados);
+    expect(orderAz(dataPokemones)).toBe(dataPokemonesOrdenados);
   });
 });
 
