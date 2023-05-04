@@ -86,6 +86,7 @@ function opcionesHuevos (){
         const pokemonesEgg = filterEgg(pokemones, boton.dataset.km)
         let km = boton.dataset.km
         km = km.substring(0, 2).trim()
+        console.log(km)
         const resultadoCalculo =calculoAgregado(km)
         mostrarPokemones(contenedorPokemon, pokemonesEgg )
 

@@ -1,37 +1,49 @@
-# Pokémon
 
-Pokémon GO es una experiencia de juego internacional que cuenta con más de mil
-millones de descargas y ha sido nombrada "el mejor juego para móviles" por
-Game Developers Choice Awards y "la mejor aplicación del año" por TechCrunch
-(tomado de Google Play). Los usuarios del juego se convierten en "Maestros/
-entrenadores de Pokémon" y pueden:
+  # Data lovers 
+![proyecto final](./img/../../../img/imgreedme/Captura%20de%20pantalla%202023-05-03%20190842.png)
 
-- **Descubrir el mundo Pokémon:** explorar y descubrir nuevos Pokémon allá
-  donde vayan.
-- **Atrapar** distintos Pokémon para completar su Pokédex.
-- **Pelear** contra Pokémon de otros entrenadores y conquistar un gimnasio.
-- **Competir** en épicos combates contra otros entrenadores.
-- **Hacer equipo** con otros entrenadores para atrapar poderosos Pokémon
-  durante las incursiones.
 
-## Hallazgos
 
-Para entender mejor qué necesidades complementarias a la app tienen los
-usuarios, hicimos una rápida investigación (research) y estos son algunos
-de los hallazgos.
+## Intruducción 
 
-- Los Pokémon tienen características únicas que determinan las decisiones que
-  toma el usuario (tipo, debilidad, peso, multiplicador, etc.)
-- Un maestro Pokémon antes de salir a casar los Pokémon tienen que:
-  saber el top 10 de frecuencia de aparición de los Pokémon.
-- Los Pokémon tienen distintos tipos y debilidades de combate. Estas
-  características son importantes cuando un maestro Pokémon elige al Pokémon
-  más adecuado para su batalla. Hay veces que tiene que elegir a los que
-  tienen menos cantidad de debilidades y saber de que tipo son. Por ello, es
-  importante para un maestro Pokémon poder ordenarlos por estas 2
-  características.
-- Los Pokémon evolucionan y es importante para un
-  maestro Pokémon saber cuántas y cuáles son las evoluciones que tienen antes y
-  después.
-- Los Pokémon se alimentan de caramelos y un maestro Pokémon necesita saber
-  cuántos caramelos necesita un Pokémon para evolucionar.
+El siguiente Redme se presenta el proyecto data lovers, una pagina web donde se presentan pokemones de primera y segunda generación
+
+## Objetivos 
+
+Los objetivos de este proyecto es poder ver la data de pokemones, ordenarlas y filtrarla. 
+
+
+## Usuabilidad 
+
+Este preyecto esta pensado para usuarios que desean conocer, invesgar y buscar pokemones 
+
+De esta forma quienes deseean buscar un pokemon ya sea por su tipo o saber que pokemones puedo obtener a travá de los  Egg, podran encontrarlo en esta pagina. todas las funcionalidades que puedes encontrar en este proyecto es: 
+
+1. Ver la data de pokemones
+2. Ordenar la data de la A-Z o de la Z-A
+3. Filtrar la data por tipo
+4. Filtrar los pokemones según los kilometros de los huevos
+5. Saber cuanto tiempo necesito caminar para obtener uno de los huevos 
+
+
+
+## Prototipos 
+
+### Prototipo de baja fidelidad 
+ 
+ Inicialmente se penso realizar una pagina que contenga un menu con diferentes opciones, cada una  de ellas te llevara a una pestaña nueva, con diferentes funcionalidades
+
+
+### Prototipo de alta fidelidad 
+
+Luego de analizar y pedir feedback del prototipo, llegamos al consenso de ser medianamente fiel al prototipo.
+
+
+### Proyecto terminado
+
+Al terminar el proyecto se realizaron cambios para optimizar el trabajo conforme al tiempo disponible.
+
+### Colaboracion
+
+El trabajo fue realizado en colaboración de Linda Aguilar.
+

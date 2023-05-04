@@ -1,6 +1,5 @@
 import data from './data/pokemon/pokemon.js';
-
-export const pokemones = data.pokemon;
+const pokemones = data.pokemon;
 
 
 // funcion que entrega los pokemoned

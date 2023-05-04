@@ -1,9 +1,24 @@
 import { filter } from '../src/data.js';
 import { filterEgg } from '../src/data.js';
 import { orderAz } from '../src/data.js';
+import { orderZa } from '../src/data.js';
+import { mostrarData } from '../src/data.js';
+import { calculoAgregado } from '../src/data.js';
+
+
+describe('calculoAgregado', () => {
+  it('debería retornar string con tiempo y hora ', () => {
+    expect(calculoAgregado(7)).toStrictEqual("Lo que debes caminar para consegir este huevo es 1 horas y 24 minutos");
+  });
+});
 
 
 
+describe('mostrarData', () => {
+  it('debería retornar los pokemones', () => {
+    expect(Array.isArray(mostrarData())).toBe(true);
+  });
+});
 
 describe('filter', () => {
   it('dos parametros vacios', () => {
@@ -32,17 +47,17 @@ describe('orderAz', () => {
   });*/
   it('validar orden de la A a la Z', () => {
     const dataPokemones= [
-      {pokemon: "bb"},
-      {pokemon: "aa"},
-      {pokemon: "cc"}
+      {"name": "bb"},
+      {"name": "aa"},
+      {"name": "cc"}
     ]
 
     const dataPokemonesOrdenados= [
-      {pokemon: "aa"},
-      {pokemon: "bb"},
-      {pokemon: "cc"}
+      {"name": "aa"},
+      {"name": "bb"},
+      {"name": "cc"}
     ]
-    expect(orderAz(dataPokemones)).toBe(dataPokemonesOrdenados);
+    expect(orderAz(dataPokemones)).toEqual(dataPokemonesOrdenados);
   });
 });
 
@@ -67,4 +82,24 @@ describe('filterEgg', () => {
     expect (() =>filter("", "")).toThrow(TypeError)
   });*/
  
+});
+
+describe('orderZa', () => {
+  /* it('dos parametros vacios', () => {
+    expect (() =>filter("", "")).toThrow(TypeError)
+  });*/
+  it('validar orden de la Z a la A', () => {
+    const dataPokemones= [
+      {"name": "bb"},
+      {"name": "aa"},
+      {"name": "cc"}
+    ]
+
+    const dataPokemonesOrdenados= [
+      {"name": "cc"},
+      {"name": "bb"},
+      {"name": "aa"}
+    ]
+    expect(orderZa(dataPokemones)).toEqual(dataPokemonesOrdenados);
+  });
 });
